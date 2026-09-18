@@ -1,0 +1,1361 @@
+{
+  "Four Corners 2nd Edition Level 3||7 Personalities||Personality traits": {
+    "cat3104857.xml": [
+      {
+        "type": "Drag & Drop",
+        "question_number": 1,
+        "question": "1. Leo is very . He wants to be the president of a company and make a lot of money. Leo is also very . He pays attention to the details and does things very well. | 2. Everyone likes Carla because she's very . She never worries about the little things. Carla is also very . She always sees the good side of things. | 3. Lisa is the most person I know. She climbs mountains and loves to travel alone. But she's also a little . When she makes a decision, she doesn't like to change her mind. | 4. Don is about everything. When he sees something new, he always wants to stop and learn about it. He's also very . He loves to meet new people.",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "ambitious",
+          "careful",
+          "easygoing",
+          "optimistic",
+          "adventurous",
+          "stubborn",
+          "curious",
+          "outgoing"
+        ],
+        "correct_answer": "",
+        "correct_pairs": {
+          "ID0": "ambitious",
+          "ID1": "careful",
+          "ID2": "easygoing",
+          "ID3": "optimistic",
+          "ID4": "adventurous",
+          "ID5": "stubborn",
+          "ID6": "curious",
+          "ID7": "outgoing"
+        },
+        "gap_texts": {
+          "GTID0_0": "ambitious",
+          "GTID1_0": "careful",
+          "GTID2_0": "easygoing",
+          "GTID3_0": "optimistic",
+          "GTID4_0": "adventurous",
+          "GTID5_0": "stubborn",
+          "GTID6_0": "curious",
+          "GTID7_0": "outgoing"
+        }
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Being a good friend 2": {
+    "cat3104936.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "1. Jessica thinks Brandon is a great friend. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "T",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "2. Jessica didn't like Doug's pop group very much. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "T",
+        "correct_id": "0",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 3,
+        "question": "3. Doug doesn't speak to Brandon. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "NI",
+        "correct_id": "2",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 4,
+        "question": "4. Brandon thinks Doug is very mature. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "F",
+        "correct_id": "1",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 5,
+        "question": "5. Jessica and Megan planned to travel together. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "T",
+        "correct_id": "0",
+        "response_id": "RESPONSE4"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 6,
+        "question": "6. Megan was completely honest about her problems. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "F",
+        "correct_id": "1",
+        "response_id": "RESPONSE5"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 7,
+        "question": "7. Jessica and Megan went to Mexico together. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "NI",
+        "correct_id": "2",
+        "response_id": "RESPONSE6"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 8,
+        "question": "8. Jessica and Megan are not friends now. TFNI",
+        "instruction": "Listen. Choose T (True), F (False), or NI (no information).",
+        "audio_filename": "S3_26090_FC3_U07_SD_A02_E01_IN",
+        "answers": [
+          "T",
+          "F",
+          "NI"
+        ],
+        "correct_answer": "F",
+        "correct_id": "1",
+        "response_id": "RESPONSE7"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Signs of the zodiac 1": {
+    "cat3104938.xml": [
+      {
+        "type": "Drag & Drop",
+        "question_number": 1,
+        "question": "According to Danielle's video: | 1. Wendy is and ambitious. She wants things to be perfect, but she isn't open to new ideas. | 2. Max is . He knows what he wants, but he doesn't like to talk about his feelings. | 3. Peter is . He's very good at business, but he worries too much. | 4. Danielle is and creative, but she's sometimes .",
+        "instruction": "Watch the video. Complete the sentences.",
+        "audio_filename": "",
+        "answers": [
+          "hardworking",
+          "creative",
+          "ambitious",
+          "adventurous",
+          "unreliable"
+        ],
+        "correct_answer": "",
+        "correct_pairs": {
+          "ID0": "hardworking",
+          "ID1": "creative",
+          "ID2": "ambitious",
+          "ID3": "adventurous",
+          "ID4": "unreliable"
+        },
+        "gap_texts": {
+          "GTID0_0": "hardworking",
+          "GTID1_0": "creative",
+          "GTID2_0": "ambitious",
+          "GTID3_0": "adventurous",
+          "GTID4_0": "unreliable"
+        }
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||7 Personalities": {
+    "cat3104857.xml": [
+      {
+        "type": "Drag & Drop",
+        "question_number": 1,
+        "question": "1. Leo is very . He wants to be the president of a company and make a lot of money. Leo is also very . He pays attention to the details and does things very well. | 2. Everyone likes Carla because she's very . She never worries about the little things. Carla is also very . She always sees the good side of things. | 3. Lisa is the most person I know. She climbs mountains and loves to travel alone. But she's also a little . When she makes a decision, she doesn't like to change her mind. | 4. Don is about everything. When he sees something new, he always wants to stop and learn about it. He's also very . He loves to meet new people.",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "ambitious",
+          "careful",
+          "easygoing",
+          "optimistic",
+          "adventurous",
+          "stubborn",
+          "curious",
+          "outgoing"
+        ],
+        "correct_answer": "",
+        "correct_pairs": {
+          "ID0": "ambitious",
+          "ID1": "careful",
+          "ID2": "easygoing",
+          "ID3": "optimistic",
+          "ID4": "adventurous",
+          "ID5": "stubborn",
+          "ID6": "curious",
+          "ID7": "outgoing"
+        },
+        "gap_texts": {
+          "GTID0_0": "ambitious",
+          "GTID1_0": "careful",
+          "GTID2_0": "easygoing",
+          "GTID3_0": "optimistic",
+          "GTID4_0": "adventurous",
+          "GTID5_0": "stubborn",
+          "GTID6_0": "curious",
+          "GTID7_0": "outgoing"
+        }
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||8 The environment||Stress in compound nouns": {
+    "cat3104962.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26093_FC3_U08_SA_A04_E01_IT01",
+        "answers": [
+          "HOMEwork",
+          "homeWORK"
+        ],
+        "correct_answer": "HOMEwork",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104964.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26099_FC3_U08_SA_A04_E01_IT02",
+        "answers": [
+          "eyeWEAR",
+          "EYEwear"
+        ],
+        "correct_answer": "EYEwear",
+        "correct_id": "C0_1"
+      }
+    ],
+    "cat3104965.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26101_FC3_U08_SA_A04_E01_IT03",
+        "answers": [
+          "HAIRstyle",
+          "hairSTYLE"
+        ],
+        "correct_answer": "HAIRstyle",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104966.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26108_FC3_U08_SA_A04_E01_IT04",
+        "answers": [
+          "SEAsick",
+          "seaSICK"
+        ],
+        "correct_answer": "SEAsick",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104967.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26100_FC3_U08_SA_A04_E01_IT05",
+        "answers": [
+          "earRINGS",
+          "EARrings"
+        ],
+        "correct_answer": "EARrings",
+        "correct_id": "C0_1"
+      }
+    ],
+    "cat3104968.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26104_FC3_U08_SA_A04_E01_IT06",
+        "answers": [
+          "TABLE tennis",
+          "table TENNIS"
+        ],
+        "correct_answer": "TABLE tennis",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104969.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26110_FC3_U08_SA_A04_E01_IT07",
+        "answers": [
+          "SUBWAY system",
+          "subway SYSTEM"
+        ],
+        "correct_answer": "SUBWAY system",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104971.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26122_FC3_U08_SA_A04_E01_IT08",
+        "answers": [
+          "job INTERVIEW",
+          "JOB interview"
+        ],
+        "correct_answer": "JOB interview",
+        "correct_id": "C0_1"
+      }
+    ],
+    "cat3104972.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26102_FC3_U08_SA_A04_E01_IT09",
+        "answers": [
+          "BUSINESS meeting",
+          "business MEETING"
+        ],
+        "correct_answer": "BUSINESS meeting",
+        "correct_id": "C0_0"
+      }
+    ],
+    "cat3104973.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "instruction": "Listen to the sentence. Choose the stressed word in each compound noun.",
+        "audio_filename": "S3_26103_FC3_U08_SA_A04_E01_IT10",
+        "answers": [
+          "SOCCER practice",
+          "soccer PRACTICE"
+        ],
+        "correct_answer": "SOCCER practice",
+        "correct_id": "C0_0"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Adverbs modifying adjectives and verbs 1": {
+    "cat3104847.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "Jon Wilson is an easygoing persona person easygoing, who is also serious veryvery serious about his job.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "an easygoing person",
+          "a person easygoing"
+        ],
+        "correct_answer": "an easygoing person",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "Jon Wilson is an easygoing persona person easygoing, who is also serious veryvery serious about his job.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "serious very",
+          "very serious"
+        ],
+        "correct_answer": "very serious",
+        "correct_id": "1",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 3,
+        "question": "He always early arrivesarrives early, very hard worksworks very hard, and does quickly his workdoes his work quickly.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "early arrives",
+          "arrives early"
+        ],
+        "correct_answer": "arrives early",
+        "correct_id": "1",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 4,
+        "question": "He always early arrivesarrives early, very hard worksworks very hard, and does quickly his workdoes his work quickly.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "very hard works",
+          "works very hard"
+        ],
+        "correct_answer": "works very hard",
+        "correct_id": "1",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 5,
+        "question": "He always early arrivesarrives early, very hard worksworks very hard, and does quickly his workdoes his work quickly.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "does quickly his work",
+          "does his work quickly"
+        ],
+        "correct_answer": "does his work quickly",
+        "correct_id": "1",
+        "response_id": "RESPONSE4"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 6,
+        "question": "Jon also works really wellreally well works in large groups. He is a very outgoing personperson very outgoing, and he makes easily new friendsmakes new friends easily. At meetings, he listens carefullycarefully listens to other people, and he always has something interesting veryvery interesting to ",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "works really well",
+          "really well works"
+        ],
+        "correct_answer": "works really well",
+        "correct_id": "0",
+        "response_id": "RESPONSE5"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 7,
+        "question": "Jon also works really wellreally well works in large groups. He is a very outgoing personperson very outgoing, and he makes easily new friendsmakes new friends easily. At meetings, he listens carefullycarefully listens to other people, and he always has something interesting veryvery interesting to ",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "very outgoing person",
+          "person very outgoing"
+        ],
+        "correct_answer": "very outgoing person",
+        "correct_id": "0",
+        "response_id": "RESPONSE6"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 8,
+        "question": "Jon also works really wellreally well works in large groups. He is a very outgoing personperson very outgoing, and he makes easily new friendsmakes new friends easily. At meetings, he listens carefullycarefully listens to other people, and he always has something interesting veryvery interesting to ",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "makes easily new friends",
+          "makes new friends easily"
+        ],
+        "correct_answer": "makes new friends easily",
+        "correct_id": "1",
+        "response_id": "RESPONSE7"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 9,
+        "question": "Jon also works really wellreally well works in large groups. He is a very outgoing personperson very outgoing, and he makes easily new friendsmakes new friends easily. At meetings, he listens carefullycarefully listens to other people, and he always has something interesting veryvery interesting to ",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "listens carefully",
+          "carefully listens"
+        ],
+        "correct_answer": "listens carefully",
+        "correct_id": "0",
+        "response_id": "RESPONSE8"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 10,
+        "question": "Jon also works really wellreally well works in large groups. He is a very outgoing personperson very outgoing, and he makes easily new friendsmakes new friends easily. At meetings, he listens carefullycarefully listens to other people, and he always has something interesting veryvery interesting to ",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "interesting very",
+          "very interesting"
+        ],
+        "correct_answer": "very interesting",
+        "correct_id": "1",
+        "response_id": "RESPONSE9"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 11,
+        "question": "Jon is also fairly ambitiousambitious fairly, and he works wellwell works without direction.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "fairly ambitious",
+          "ambitious fairly"
+        ],
+        "correct_answer": "fairly ambitious",
+        "correct_id": "0",
+        "response_id": "RESPONSE10"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 12,
+        "question": "Jon is also fairly ambitiousambitious fairly, and he works wellwell works without direction.",
+        "instruction": "Choose the correct answers to complete the job recommendation.",
+        "audio_filename": "",
+        "answers": [
+          "works well",
+          "well works"
+        ],
+        "correct_answer": "works well",
+        "correct_id": "0",
+        "response_id": "RESPONSE11"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Adverbs modifying adjectives and verbs 2": {
+    "cat3104893.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "1. I have a [...].very good doctorgood very doctorgood doctor very",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "very good doctor",
+          "good very doctor",
+          "good doctor very"
+        ],
+        "correct_answer": "very good doctor",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "2. Sheâs [...], and she laughs a lot.a really easygoing personan easygoing really personan easygoing person really",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "a really easygoing person",
+          "an easygoing really person",
+          "an easygoing person really"
+        ],
+        "correct_answer": "a really easygoing person",
+        "correct_id": "0",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 3,
+        "question": "3. [...] and asks lots of questions.She listens carefullyShe carefully listensCarefully she listens",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "She listens carefully",
+          "She carefully listens",
+          "Carefully she listens"
+        ],
+        "correct_answer": "She listens carefully",
+        "correct_id": "0",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 4,
+        "question": "4. She makes you [...].feel pretty comfortablepretty feel comfortablefeel comfortable pretty",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "feel pretty comfortable",
+          "pretty feel comfortable",
+          "feel comfortable pretty"
+        ],
+        "correct_answer": "feel pretty comfortable",
+        "correct_id": "0",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 5,
+        "question": "5. I always [...] when Iâm at her office.feel extremely relaxedextremely feel relaxedfeel relaxed extremely",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "feel extremely relaxed",
+          "extremely feel relaxed",
+          "feel relaxed extremely"
+        ],
+        "correct_answer": "feel extremely relaxed",
+        "correct_id": "0",
+        "response_id": "RESPONSE4"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 6,
+        "question": "6. My other doctor [...].always arrived latelate always arrivedalways late arrived",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "always arrived late",
+          "late always arrived",
+          "always late arrived"
+        ],
+        "correct_answer": "always arrived late",
+        "correct_id": "0",
+        "response_id": "RESPONSE5"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 7,
+        "question": "7. She was unfriendly, and she [...].didnât listen wellwell didnât listendidnât well listen",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "didnât listen well",
+          "well didnât listen",
+          "didnât well listen"
+        ],
+        "correct_answer": "didnât listen well",
+        "correct_id": "0",
+        "response_id": "RESPONSE6"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 8,
+        "question": "8. I know [...], but I didnât like to go to her office.she worked hardhard she workedshe hard worked",
+        "instruction": "Choose the correct answers.",
+        "audio_filename": "",
+        "answers": [
+          "she worked hard",
+          "hard she worked",
+          "she hard worked"
+        ],
+        "correct_answer": "she worked hard",
+        "correct_id": "0",
+        "response_id": "RESPONSE7"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Opinions 1": {
+    "cat3104930.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: I've worked here for two years, and I haven't gotten a promotion yet. B: That's too bad. [...], I think you're too ambitious.But if you ask meMaybe it's just meI mean A: What do you mean? B: Well, people don't usually get a promotion after two years. You need to show your boss that youâre hardw",
+        "instruction": "Choose the correct expressions to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "But if you ask me",
+          "Maybe it's just me",
+          "I mean"
+        ],
+        "correct_answer": "But if you ask me",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "A: I've worked here for two years, and I haven't gotten a promotion yet. B: That's too bad. , I think you're too ambitious.But if you ask meMaybe it's just meI mean A: What do you mean? B: Well, people don't usually get a promotion after two years. You need to show your boss that youâre hardworkin",
+        "instruction": "Choose the correct expressions to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "Don't you think so?",
+          "What do you mean?",
+          "In my opinion."
+        ],
+        "correct_answer": "Don't you think so?",
+        "correct_id": "0",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 3,
+        "question": "A: I've worked here for two years, and I haven't gotten a promotion yet. B: That's too bad. , I think you're too ambitious.But if you ask meMaybe it's just meI mean A: What do you mean? B: Well, people don't usually get a promotion after two years. You need to show your boss that youâre hardworkin",
+        "instruction": "Choose the correct expressions to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "Maybe it's just me",
+          "In your opinion",
+          "Don't you agree?"
+        ],
+        "correct_answer": "Maybe it's just me",
+        "correct_id": "0",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 4,
+        "question": "A: I've worked here for two years, and I haven't gotten a promotion yet. B: That's too bad. , I think you're too ambitious.But if you ask meMaybe it's just meI mean A: What do you mean? B: Well, people don't usually get a promotion after two years. You need to show your boss that youâre hardworkin",
+        "instruction": "Choose the correct expressions to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "Don't you agree?",
+          "Maybe it's just me.",
+          "Don't you think?"
+        ],
+        "correct_answer": "Don't you agree?",
+        "correct_id": "0",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 5,
+        "question": "A: I've worked here for two years, and I haven't gotten a promotion yet. B: That's too bad. , I think you're too ambitious.But if you ask meMaybe it's just meI mean A: What do you mean? B: Well, people don't usually get a promotion after two years. You need to show your boss that youâre hardworkin",
+        "instruction": "Choose the correct expressions to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "Don't you think that's true?",
+          "Do you disagree?",
+          "Why not?"
+        ],
+        "correct_answer": "Don't you think that's true?",
+        "correct_id": "0",
+        "response_id": "RESPONSE4"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Signs of the zodiac 2": {
+    "cat3104934.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Watch the video. Choose the true sentences.",
+        "instruction": "Watch the video. Choose the true sentences.",
+        "audio_filename": "",
+        "answers": [
+          "Wendy has worked at the same job for ten years.",
+          "Wendy is a painter."
+        ],
+        "correct_answer": "Wendy has worked at the same job for ten years.",
+        "correct_id": "C0_0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Multiple Choice",
+        "question_number": 2,
+        "question": "Watch the video. Choose the true sentences.",
+        "instruction": "Watch the video. Choose the true sentences.",
+        "audio_filename": "",
+        "answers": [
+          "Max is a designer for a website.",
+          "Max has worked for the same company for two years."
+        ],
+        "correct_answer": "Max has worked for the same company for two years.",
+        "correct_id": "C1_1",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Multiple Choice",
+        "question_number": 3,
+        "question": "Watch the video. Choose the true sentences.",
+        "instruction": "Watch the video. Choose the true sentences.",
+        "audio_filename": "",
+        "answers": [
+          "Peter sells cars.",
+          "Peter started his business in 2006."
+        ],
+        "correct_answer": "Peter sells cars.",
+        "correct_id": "C2_0",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Multiple Choice",
+        "question_number": 4,
+        "question": "Watch the video. Choose the true sentences.",
+        "instruction": "Watch the video. Choose the true sentences.",
+        "audio_filename": "",
+        "answers": [
+          "Danielle never tries new things.",
+          "Danielle is sometimes late with her projects."
+        ],
+        "correct_answer": "Danielle is sometimes late with her projects.",
+        "correct_id": "C3_1",
+        "response_id": "RESPONSE3"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||More personality traits": {
+    "cat3104886.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26083_FC3_U07_SC_A01_E01_IT01",
+        "answers": [
+          "She makes decisions quickly.",
+          "She always tells the truth."
+        ],
+        "correct_answer": "She always tells the truth.",
+        "correct_id": "C0_1",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104887.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26087_FC3_U07_SC_A01_E01_IT02",
+        "answers": [
+          "He promised to help, but he didn't.",
+          "He can't make decisions quickly."
+        ],
+        "correct_answer": "He promised to help, but he didn't.",
+        "correct_id": "C0_0",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104902.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26082_FC3_U07_SC_A01_E01_IT03",
+        "answers": [
+          "She makes decisions quickly.",
+          "She is always friendly."
+        ],
+        "correct_answer": "She makes decisions quickly.",
+        "correct_id": "C0_0",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104903.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26084_FC3_U07_SC_A01_E01_IT04",
+        "answers": [
+          "He always thinks of our needs.",
+          "He doesn't behave in a responsible way."
+        ],
+        "correct_answer": "He always thinks of our needs.",
+        "correct_id": "C0_0",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104904.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26085_FC3_U07_SC_A01_E01_IT05",
+        "answers": [
+          "He still behaves like a child.",
+          "He treats his friends fairly."
+        ],
+        "correct_answer": "He still behaves like a child.",
+        "correct_id": "C0_0",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104905.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26089_FC3_U07_SC_A01_E01_IT06",
+        "answers": [
+          "She is treating everyone fairly.",
+          "She disagrees with everything I say."
+        ],
+        "correct_answer": "She disagrees with everything I say.",
+        "correct_id": "C0_1",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104906.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26088_FC3_U07_SC_A01_E01_IT07",
+        "answers": [
+          "She never thinks of my needs.",
+          "I'm always late, but she never gets annoyed."
+        ],
+        "correct_answer": "I'm always late, but she never gets annoyed.",
+        "correct_id": "C0_1",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3104907.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen. Choose the correct sentence that follows each description.",
+        "instruction": "Listen. Choose the correct sentence that follows each description.",
+        "audio_filename": "S3_26086_FC3_U07_SC_A01_E01_IT08",
+        "answers": [
+          "He promised to help me, and he did.",
+          "He only helps some of students."
+        ],
+        "correct_answer": "He only helps some of students.",
+        "correct_id": "C0_1",
+        "response_id": "RESPONSE0"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Present perfect with for and since 1": {
+    "cat3104896.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "1. A: How long has Hiro lived in Tokyo? B: For [...].three monthsNovember",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "three months",
+          "November"
+        ],
+        "correct_answer": "three months",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "2. A: How long have your parents been in town? B: Since [...].several daysSaturday",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "several days",
+          "Saturday"
+        ],
+        "correct_answer": "Saturday",
+        "correct_id": "1",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 3,
+        "question": "3. A: How long has Britney been on the phone? B: For only [...].two o'clockten minutes",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "two o'clock",
+          "ten minutes"
+        ],
+        "correct_answer": "ten minutes",
+        "correct_id": "1",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 4,
+        "question": "4. A: How long have Jaclyn and Julian been married? B: Oh, I think they've been married for about [...].1990twenty years",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "1990",
+          "twenty years"
+        ],
+        "correct_answer": "twenty years",
+        "correct_id": "1",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 5,
+        "question": "5. A: Is Gabrielle here? B: Yes, she is. She's been here since [...].an hourlast night",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "an hour",
+          "last night"
+        ],
+        "correct_answer": "last night",
+        "correct_id": "1",
+        "response_id": "RESPONSE4"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 6,
+        "question": "6. A: Do you know Ricardo? B: Yes, I do. I've known him for [...].high schoolquite a while",
+        "instruction": "Choose the correct time expression to complete each sentence.",
+        "audio_filename": "",
+        "answers": [
+          "high school",
+          "quite a while"
+        ],
+        "correct_answer": "quite a while",
+        "correct_id": "1",
+        "response_id": "RESPONSE5"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Opinions 2": {
+    "cat3104986.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: I'd like to eat [...] organic food.fewermore B: Me, too. There are chemicals in the food we eat.too muchtoo many",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "fewer",
+          "more"
+        ],
+        "correct_answer": "more",
+        "correct_id": "1",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "A: I'd like to eat organic food.fewermore B: Me, too. There are [...] chemicals in the food we eat.too muchtoo many",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "too much",
+          "too many"
+        ],
+        "correct_answer": "too many",
+        "correct_id": "1",
+        "response_id": "RESPONSE1"
+      }
+    ],
+    "cat3104994.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: There are [...] hybrid cars on the road these days. Don't you think so?muchmore B: I do. people are buying cars that use a lot of gas.FewerLess",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "much",
+          "more"
+        ],
+        "correct_answer": "more",
+        "correct_id": "1",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "A: There are hybrid cars on the road these days. Don't you think so?muchmore B: I do. [...] people are buying cars that use a lot of gas.FewerLess",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "Fewer",
+          "Less"
+        ],
+        "correct_answer": "Fewer",
+        "correct_id": "0",
+        "response_id": "RESPONSE1"
+      }
+    ],
+    "cat3104995.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: We [...] recycling bins here.don't have enoughhave too many B: I agree. We need more of them.",
+        "instruction": "Choose the correct answer to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "don't have enough",
+          "have too many"
+        ],
+        "correct_answer": "don't have enough",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      }
+    ],
+    "cat3105006.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: I think this computer uses [...] energy.too muchtoo many B: My computer does, too. I need to buy one that uses energy.fewerless",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "too much",
+          "too many"
+        ],
+        "correct_answer": "too much",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "A: I think this computer uses energy.too muchtoo many B: My computer does, too. I need to buy one that uses [...] energy.fewerless",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "fewer",
+          "less"
+        ],
+        "correct_answer": "less",
+        "correct_id": "1",
+        "response_id": "RESPONSE1"
+      }
+    ],
+    "cat3105007.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: There aren't [...] wind farms in this area.enoughmuch B: That will change soon. The government just needs time.fewermore",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "enough",
+          "much"
+        ],
+        "correct_answer": "enough",
+        "correct_id": "0",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Dropdown",
+        "question_number": 2,
+        "question": "A: There aren't wind farms in this area.enoughmuch B: That will change soon. The government just needs [...] time.fewermore",
+        "instruction": "Choose the correct answers to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "fewer",
+          "more"
+        ],
+        "correct_answer": "more",
+        "correct_id": "1",
+        "response_id": "RESPONSE1"
+      }
+    ],
+    "cat3105032.xml": [
+      {
+        "type": "Dropdown",
+        "question_number": 1,
+        "question": "A: I think we use [...] plastic bags.too muchtoo many B: I know we do, but we always recycle them.",
+        "instruction": "Choose the correct answer to complete the conversation.",
+        "audio_filename": "",
+        "answers": [
+          "too much",
+          "too many"
+        ],
+        "correct_answer": "too many",
+        "correct_id": "1",
+        "response_id": "RESPONSE0"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Present perfect with for and since 2": {
+    "cat3104888.xml": [
+      {
+        "type": "Text Entry",
+        "question_number": 1,
+        "question": "1. Pat lives in Toronto now. She moved there ten years ago. Pat [...] in Toronto ten years.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "has lived",
+          "'s lived"
+        ],
+        "correct_answer": "has lived",
+        "response_id": "RESPONSE0"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 2,
+        "question": "1. Pat lives in Toronto now. She moved there ten years ago. Pat in Toronto [...] ten years.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "for"
+        ],
+        "correct_answer": "for",
+        "response_id": "RESPONSE1"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 3,
+        "question": "2. Dennis is very outgoing. He was outgoing when he was a child, too. Dennis [...] outgoing he was a child.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "has been",
+          "'s been"
+        ],
+        "correct_answer": "has been",
+        "response_id": "RESPONSE2"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 4,
+        "question": "2. Dennis is very outgoing. He was outgoing when he was a child, too. Dennis outgoing [...] he was a child.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "since"
+        ],
+        "correct_answer": "since",
+        "response_id": "RESPONSE3"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 5,
+        "question": "3. Mr. and Mrs. Carlson are on vacation now. They left a week ago. Mr. and Mrs. Carlson [...] on vacation a week.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "have been"
+        ],
+        "correct_answer": "have been",
+        "response_id": "RESPONSE4"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 6,
+        "question": "3. Mr. and Mrs. Carlson are on vacation now. They left a week ago. Mr. and Mrs. Carlson on vacation [...] a week.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "for"
+        ],
+        "correct_answer": "for",
+        "response_id": "RESPONSE5"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 7,
+        "question": "4. Kristin has an old bike. She got it a long time ago. Kristin [...] her bike a long time.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "has had",
+          "'s had"
+        ],
+        "correct_answer": "has had",
+        "response_id": "RESPONSE6"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 8,
+        "question": "4. Kristin has an old bike. She got it a long time ago. Kristin her bike [...] a long time.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "for"
+        ],
+        "correct_answer": "for",
+        "response_id": "RESPONSE7"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 9,
+        "question": "5. Jim has a headache. It started yesterday. Jim [...] a headache yesterday.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "has had",
+          "'s had"
+        ],
+        "correct_answer": "has had",
+        "response_id": "RESPONSE8"
+      },
+      {
+        "type": "Text Entry",
+        "question_number": 10,
+        "question": "5. Jim has a headache. It started yesterday. Jim a headache [...] yesterday.",
+        "instruction": "Rewrite each pair of sentences. Use the present perfect and for or since.",
+        "audio_filename": "",
+        "answers": [
+          "since"
+        ],
+        "correct_answer": "since",
+        "response_id": "RESPONSE9"
+      }
+    ]
+  },
+  "Four Corners 2nd Edition Level 3||7 Personalities||Being a good friend 1": {
+    "cat3104960.xml": [
+      {
+        "type": "Multiple Choice",
+        "question_number": 1,
+        "question": "Listen to a conversation about friendship. Choose all the advice from the article Brandon is reading.",
+        "instruction": "Listen to a conversation about friendship. Choose all the advice from the article Brandon is reading.",
+        "audio_filename": "S3_26091_FC3_U07_SD_A01_E01_IN",
+        "answers": [
+          "Tell your friends that you like them.",
+          "Always be honest with your friends.",
+          "Do favors for your friends.",
+          "Find the best time to give a friend your opinion.",
+          "Find the best way to give a friend your opinion.",
+          "Don't tell your friends when you're angry.",
+          "If there's a problem, be patient.",
+          "Say you are sorry when you say something wrong."
+        ],
+        "correct_answer": "Always be honest with your friends.",
+        "correct_answers": [
+          "Always be honest with your friends.",
+          "Find the best time to give a friend your opinion.",
+          "Find the best way to give a friend your opinion.",
+          "If there's a problem, be patient."
+        ],
+        "is_multiple_answers": true,
+        "correct_id": "C0_1",
+        "response_id": "RESPONSE0"
+      }
+    ]
+  }
+}
