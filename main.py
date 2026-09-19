@@ -12,7 +12,6 @@ import xml.etree.ElementTree as ET
 import getpass
 import hashlib
 import html as html_module
-
 from pathlib import Path
 from colorama import Fore, Style, init
 from playwright.async_api import async_playwright
@@ -97,8 +96,6 @@ class CambridgeOneScraper:
         self.last_data_js_url = None
         self.log_file_path = None
         self.tts_engine = None
-        
-        # สำหรับ Timing
         self.start_time = 0
         self.exercise_times = {}
 
@@ -458,9 +455,14 @@ class CambridgeOneScraper:
         if dd_questions:
             print(f"  {Fore.CYAN}[*] จะเติม Drag & Drop {len(dd_questions)} ข้อ...{Style.RESET_ALL}")
             for q in dd_questions:
-                await self._fill_click_to_fill(q)
-                result['filled'] += 1
+                filled = await self._fill_click_to_fill(q)
+                if filled:
+                    result['filled'] += 1
+                else:
+                    result['failed'].append(q.get('question_number', 'Drag & Drop'))
             result['total'] += len(dd_questions)
+            if result['filled'] < len(dd_questions):
+                print(f"  {Fore.YELLOW}[!] เติม Drag & Drop ได้ {result['filled']}/{len(dd_questions)} ช่อง — ลองกด Check ต่อ{Style.RESET_ALL}")
         await self.debug_wait(1)
 
         # 2. Text Entry
@@ -1459,180 +1461,167 @@ class CambridgeOneScraper:
         pairs = q.get('correct_pairs', {})
         if not pairs:
             print(f"  {Fore.YELLOW}[!] ไม่มี correct_pairs สำหรับ Click-to-fill{Style.RESET_ALL}")
-            return
+            return False
 
         # เรียงตาม gap_id (ลำดับช่องว่าง)
         ordered_pairs = sorted(pairs.items(), key=lambda x: x[0])
+        success_count = 0
         
         print(f"  {Fore.CYAN}[*] กำลังคลิกคำตอบจำนวน {len(ordered_pairs)} ข้อ...{Style.RESET_ALL}")
 
-        for idx, (gap_id, answer_text_raw) in enumerate(ordered_pairs):
+        for idx, (gap_id, answer_text_raw) in enumerate(ordered_pairs, 1):
             answer_text = self._normalize_text(answer_text_raw)
             
-            success = await self._click_answer_button(answer_text, idx + 1)
+            success = await self._click_answer_button(answer_text, gap_id, idx)
             
             if success:
+                success_count += 1
                 print(f"      {Fore.GREEN}[OK] คลิก '{answer_text}' สำเร็จ{Style.RESET_ALL}")
             else:
                 print(f"  {Fore.YELLOW}[!] คลิก '{answer_text}' ไม่สำเร็จ{Style.RESET_ALL}")
             
             await self.debug_wait(0.8)  # รอให้ระบบประมวลผล
 
-    async def _click_answer_button(self, answer_text, order_num):
+        return success_count == len(ordered_pairs)
+
+    async def _click_answer_button(self, answer_text, gap_id, order_num, max_retries=2):
         """
-        คลิกที่ปุ่มคำศัพท์ (<button>) ที่อยู่ใน li.drop_area
-        ใช้ JS ค้นหา:
-        1. หา li.drop_area ทั้งหมด
-        2. หา div.draggable__content ที่มีข้อความตรงกับ answer_text
-        3. หา <button> ที่ aria-labelledby ตรงกับ id ของ content
-        4. คลิก <button> นั้น
+        คลิกปุ่มคำตอบใน pool แบบ Click-to-fill
+        Cambridge One จะย้ายคำตอบไป gap ที่ว่างถัดไปให้อัตโนมัติ
+        (ใช้ logic เดียวกับ old.py ที่ทดสอบแล้วว่าทำงานได้)
         """
-        try:
+        clean_text = answer_text.strip().lower()
+
+        for attempt in range(max_retries):
+            # === กลยุทธ์ 1: XPath หา element ที่มีข้อความตรง ===
             for frame in self.page.frames:
                 try:
-                    result = await frame.evaluate('''
-                        (args) => {
-                            const [answerText] = args;
-                            
-                            // หา li.drop_area ทั้งหมด (pool)
-                            const poolItems = document.querySelectorAll('li.drop_area.gap_match_gap_text_view');
-                            
-                            for (const li of poolItems) {
-                                // หา div.draggable__content ที่มีข้อความตรง
-                                const contentDivs = li.querySelectorAll('div.draggable__content.content');
-                                for (const contentDiv of contentDivs) {
-                                    const txt = (contentDiv.innerText || '').trim();
-                                    if (txt === answerText) {
-                                        // หา button ที่ aria-labelledby ตรงกับ id ของ contentDiv
-                                        const contentId = contentDiv.id;
-                                        let button = null;
-                                        
-                                        // ลองหาจาก aria-labelledby
-                                        if (contentId) {
-                                            button = li.querySelector(`button[aria-labelledby="${contentId}"]`);
-                                        }
-                                        
-                                        // ถ้าไม่เจอ ลองหาจากโครงสร้าง
-                                        if (!button) {
-                                            const dragEl = contentDiv.closest('.drag_element');
-                                            if (dragEl) {
-                                                button = dragEl.querySelector('button');
-                                            }
-                                        }
-                                        
-                                        // ถ้าไม่เจออีก ลองหาปุ่มแรกใน li
-                                        if (!button) {
-                                            button = li.querySelector('button');
-                                        }
-                                        
-                                        if (button) {
-                                            button.click();
-                                            return {success: true, matched: txt, buttonFound: true};
-                                        }
-                                        
-                                        // ถ้าไม่มี button ให้คลิกที่ div แทน
-                                        contentDiv.click();
-                                        return {success: true, matched: txt, buttonFound: false};
-                                    }
-                                }
-                            }
-                            
-                            // fallback: หาแบบ contains
-                            for (const li of poolItems) {
-                                const txt = (li.innerText || '').trim();
-                                if (txt.includes(answerText) || answerText.includes(txt)) {
-                                    const button = li.querySelector('button');
-                                    if (button) {
-                                        button.click();
-                                        return {success: true, matched: txt, fallback: true};
-                                    }
-                                    li.click();
-                                    return {success: true, matched: txt, fallback: 'li'};
-                                }
-                            }
-                            
-                            return {success: false, reason: 'not found'};
-                        }
-                    ''', [answer_text])
-                    
-                    if result and result.get('success'):
-                        await self.debug_wait(0.3)
+                    selector = (
+                        f'xpath=//*[(self::button or self::div or self::li or self::span) '
+                        f'and normalize-space(translate(text(), '
+                        f'"ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"))="{clean_text}"]'
+                    )
+                    element = frame.locator(selector).first
+                    if await element.count() > 0 and await element.is_visible():
+                        await element.scroll_into_view_if_needed()
+                        await element.click(force=True)
+                        await self.debug_wait(0.4)
                         return True
-                        
-                except Exception as e:
+                except Exception:
                     continue
-            
-            return False
-            
-        except Exception as e:
-            print(f"  {Fore.RED}[!] _click_answer_button error: {e}{Style.RESET_ALL}")
-            return False
+
+            # === กลยุทธ์ 2: JS click (fallback) ===
+            for frame in self.page.frames:
+                try:
+                    js_clicked = await frame.evaluate('''
+                        (targetText) => {
+                            const cleanTarget = targetText.trim().toLowerCase();
+                            const candidates = document.querySelectorAll(
+                                '.drag_element, .om-textgap-element, .drop_area, li, button, .draggable__content'
+                            );
+                            for (const el of candidates) {
+                                const text = (el.innerText || el.textContent || '').trim().toLowerCase();
+                                if (text === cleanTarget || text.includes(cleanTarget)) {
+                                    const clickable = el.querySelector('button') || el;
+                                    clickable.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    clickable.click();
+                                    clickable.dispatchEvent(new MouseEvent('click', {
+                                        bubbles: true, cancelable: true, view: window
+                                    }));
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+                    ''', answer_text)
+                    if js_clicked:
+                        await self.debug_wait(0.4)
+                        return True
+                except Exception:
+                    continue
+
+            if attempt < max_retries - 1:
+                await self.debug_wait(0.5)
+
+        return False
 
     async def _click_check_button(self):
         print(f"  {Fore.CYAN}[*] กำลังหาปุ่ม Check...{Style.RESET_ALL}")
 
         check_selectors = [
             'a.green-btn[title="Check"]',
+            'button.green-btn[title="Check"]',
+            'a[title="Check"]',
+            'button[title="Check"]',
+            '[aria-label="Check"]',
+            '[data-action="check"]',
+            '[data-event="check"]',
+            '.check-button',
+            '.check-btn',
+            '.activity-check-button',
             'a.green-btn',
             'a.btn.green-btn',
-            'a[title="Check"]',
+            'div.green-btn',
             'a:has-text("Check")',
             'button:has-text("Check")',
             'button:has-text("Submit")',
             'a:has-text("Submit")',
-            '.check-button',
-            '.check-btn',
             '.submit-btn',
             'button[type="submit"]',
-            '[data-action="check"]',
             '[data-action="submit"]',
-            '.activity-check-button',
             '.nemo-button-primary',
-            'button[data-event="check"]',
-            'a[data-event="check"]',
         ]
 
-        frames_to_search = list(self.page.frames)
-
-        for attempt in range(50):
+        for attempt in range(30):
+            # Activity iframe อาจถูก reload หลังเติมคำตอบ จึงต้องอ่าน frames ใหม่ทุกครั้ง
+            frames_to_search = list(self.page.frames)
             for frame in frames_to_search:
                 for selector in check_selectors:
                     try:
-                        btn = await frame.query_selector(selector)
-                        if not btn:
-                            continue
-                        is_visible = await btn.is_visible()
-                        if not is_visible:
-                            continue
+                        buttons = await frame.query_selector_all(selector)
+                        for btn in buttons:
+                            if not await btn.is_visible():
+                                continue
 
-                        btn_text = (await btn.inner_text()).strip()
-                        btn_title = (await btn.get_attribute('title') or '').strip()
+                            btn_text = (await btn.inner_text()).strip()
+                            btn_title = (await btn.get_attribute('title') or '').strip()
+                            aria_label = (await btn.get_attribute('aria-label') or '').strip()
+                            action = (await btn.get_attribute('data-action') or '').strip().lower()
+                            event = (await btn.get_attribute('data-event') or '').strip().lower()
+                            class_attr = (await btn.get_attribute('class') or '').lower()
 
-                        is_check = (
-                            btn_text.lower() == 'check' or
-                            btn_title.lower() == 'check' or
-                            'check' in btn_text.lower()
-                        )
+                            semantic_check = any(
+                                'check' in value.lower()
+                                for value in (btn_text, btn_title, aria_label, action, event)
+                                if value
+                            )
+                            class_only_selector = selector in {
+                                '.check-button',
+                                '.check-btn',
+                                '.activity-check-button',
+                                '.submit-btn',
+                                'button[type="submit"]',
+                            }
+                            if not semantic_check and not class_only_selector:
+                                continue
 
-                        if not is_check:
-                            continue
+                            disabled_attr = await btn.get_attribute('disabled')
+                            aria_disabled = (await btn.get_attribute('aria-disabled') or '').lower()
+                            is_disabled = (
+                                disabled_attr is not None
+                                or aria_disabled == 'true'
+                                or 'disabled' in class_attr
+                                or 'inactive' in class_attr
+                            )
+                            if is_disabled:
+                                continue
 
-                        disabled_attr = await btn.get_attribute('disabled')
-                        class_attr = (await btn.get_attribute('class') or '').lower()
-                        is_disabled = (
-                            disabled_attr is not None
-                            or 'disabled' in class_attr
-                            or 'inactive' in class_attr
-                        )
-
-                        if is_disabled:
-                            continue
-
-                        print(f"  {Fore.GREEN}[+] พบปุ่ม '{btn_text or selector}' - กำลังกด...{Style.RESET_ALL}")
-                        await btn.scroll_into_view_if_needed()
-                        await btn.click(force=True)
-                        await self.debug_wait(2)
-                        return True
+                            label = btn_text or aria_label or btn_title or selector
+                            print(f"  {Fore.GREEN}[+] พบปุ่ม '{label}' - กำลังกด...{Style.RESET_ALL}")
+                            await btn.scroll_into_view_if_needed()
+                            await btn.click(force=True)
+                            await self.debug_wait(2)
+                            return True
                     except Exception:
                         continue
             await asyncio.sleep(0.5)
@@ -2964,6 +2953,43 @@ class CambridgeOneScraper:
 
         return all_answers
 
+    def _print_exercise_answers_by_file(self, exercise_name, answers_by_file):
+        """แสดงเฉลยที่แยกตามไฟล์ XML ใน data.js"""
+        print(f"\n  {Fore.CYAN}{exercise_name}{Style.RESET_ALL}")
+        print(f"  {Fore.CYAN}{'=' * 70}{Style.RESET_ALL}")
+
+        if not answers_by_file:
+            print(f"  {Fore.YELLOW}[!] ไม่พบเฉลย{Style.RESET_ALL}")
+            return
+
+        question_number = 0
+        for filename, questions in answers_by_file.items():
+            print(f"\n  {Fore.MAGENTA}[{filename}]{Style.RESET_ALL}")
+            for question in questions:
+                question_number += 1
+                question_type = question.get('type', 'Unknown')
+                prompt = question.get('question') or question.get('instruction') or '-'
+                print(f"\n      [{question_number}] {question_type}")
+                print(f"      คำถาม: {prompt}")
+
+                if question_type == 'Drag & Drop':
+                    pairs = question.get('correct_pairs', {})
+                    if pairs:
+                        print("      คำตอบ:")
+                        for gap_id, answer in pairs.items():
+                            print(f"        {gap_id}: {answer}")
+                    continue
+
+                correct_answers = question.get('correct_answers') or []
+                correct_answer = question.get('correct_answer', '')
+                if correct_answers:
+                    answer_text = ', '.join(correct_answers)
+                else:
+                    answer_text = correct_answer or '-'
+                print(f"      คำตอบ: {Fore.GREEN}{answer_text}{Style.RESET_ALL}")
+
+        print(f"\n  {Fore.CYAN}{'=' * 70}{Style.RESET_ALL}")
+
     async def _get_answers_from_page(self, exercise_name, go_back_after=False, already_open=False):
         if not already_open:
             if not await self.click_exercise(exercise_name):
@@ -3584,12 +3610,13 @@ async def run_exercise_menu(scraper, selected_course, selected_unit, selected_ex
 async def main_async():
     print(f"""
     {Fore.GREEN}
-     .d8b.  d8888b.  .d88b.       d888888b  .d88b.   .d88b.  db      .d8888. 
-    d8' `8b 88  `8D .8P  Y8.      `~~88~~' .8P  Y8. .8P  Y8. 88      88'  YP 
-    88ooo88 88oooY' 88    88         88    88    88 88    88 88      `8bo.   
-    88~~~88 88~~~b. 88    88         88    88    88 88    88 88        `Y8b. 
-    88   88 88   8D `8b  d8'         88    `8b  d8' `8b  d8' 88booo. db   8D 
-    YP   YP Y8888P'  `Y88P'          YP     `Y88P'   `Y88P'  Y88888P `8888Y'                                                                                                                          
+     a88888b.  888888ba   .88888.     d888888P                   dP 
+    d8'   `88  88    `8b d8'   `8b       88                      88 
+    88        a88aaaa8P' 88     88       88    .d8888b. .d8888b. 88 
+    88         88   `8b. 88     88       88    88'  `88 88'  `88 88 
+    Y8.   .88  88    .88 Y8.   .8P       88    88.  .88 88.  .88 88 
+     Y88888P'  88888888P  `8888P'        dP    `88888P' `88888P' dP 
+                                                                                                                                                                                                                                                                         
     {Style.RESET_ALL}
     by z3nTr4ry""")
     print(f"    {Fore.GREEN}[+] เบราว์เซอร์จะไม่ปิดจนกว่าจะจบการทำงาน{Style.RESET_ALL}\n")
